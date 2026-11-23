@@ -1,0 +1,513 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ELSEKO - producent obwodów drukowanych PCB i montaż SMD/THT, Kobierzyce k. Wrocławia</title>
+<meta name="description" content="Obwody drukowane jedno-, dwustronne i wielowarstwowe do 16 warstw, montaż kontraktowy SMD i THT. Prototyp w 24 h, serie średnie i długie. Kobierzyce pod Wrocławiem, od 1984 roku.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#000D93">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23000D93'/%3E%3Cpath d='M12 8h13l-1.4 4H15.4l-.9 2.4h8.4l-1.3 3.6h-8.4l-.9 2.4H21L19.6 24H7z' fill='%23fff'/%3E%3C/svg%3E">
+<link rel="preload" href="fonts/saira-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-tel-900.webp" imagesrcset="img/hero-tel-900.webp 900w, img/hero-tel-1536.webp 1536w" imagesizes="max(100vw, 60vh)" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2560.webp 2560w" imagesizes="max(100vw, 150vh)" media="(min-width:761px)" fetchpriority="high">
+<style>
+@font-face{font-family:"Saira";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/saira-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2022,U+2026}
+@font-face{font-family:"Saira";font-style:normal;font-weight:100 900;font-display:swap;src:url(fonts/saira-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013-2014,U+2018-2019,U+201C-201E,U+2022,U+2026,U+20AC}
+@font-face{font-family:"Inter";font-style:normal;font-weight:400 700;font-display:swap;src:url(fonts/inter-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--granat:#000D93;--granat2:#000A74;--nieb:#1359B6;--szary:#949494;--tekst:#12163A;--opis:#4A5068;--jasna:#EEF1F5;--linia:#D5DAE3;--k:1240px;--m:clamp(16px,4vw,48px);--sk:14px}
+@media (min-width:1700px){:root{--k:1400px}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;font:400 17px/1.6 Inter,Arial,sans-serif;color:var(--tekst);background:#fff;overflow-x:hidden}
+@media (min-width:1700px){body{font-size:18px}}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-family:Saira,Arial,sans-serif;font-weight:700;line-height:1.08;letter-spacing:-.01em;margin:0;color:var(--tekst)}
+h2{font-size:clamp(30px,3.8vw,52px)}
+h3{font-size:clamp(22px,1.9vw,27px);font-weight:650}
+p{margin:0}
+.k{max-width:var(--k);margin:0 auto;padding:0 var(--m)}
+.sekcja{padding:clamp(64px,8vw,120px) 0}
+.lead{font-size:clamp(17px,1.35vw,20px);color:var(--opis);max-width:62ch}
+
+/* przycisk w pochyleniu logo (ok. 15 st.) */
+.btn{position:relative;display:inline-flex;align-items:center;justify-content:center;min-height:54px;padding:0 34px;font:600 16px/1 Saira,Arial,sans-serif;letter-spacing:.01em;text-decoration:none;cursor:pointer;border:0;color:#fff;background:var(--granat);clip-path:polygon(var(--sk) 0,100% 0,calc(100% - var(--sk)) 100%,0 100%);transition:background .2s}
+.btn:hover{background:var(--nieb)}
+.btn-jasny{background:#fff;color:var(--granat)}
+.btn-jasny:hover{background:#DDE6F6}
+
+/* sciezka PCB: odcinek, zalamanie 45 st., odcinek, pad */
+.trasa{display:flex;align-items:stretch;height:26px;color:var(--szary)}
+.trasa i{flex:1 1 0;border-top:2px solid currentColor}
+.trasa i.dol{border-top:0;border-bottom:2px solid currentColor}
+.trasa svg{flex:none;width:28px;height:26px;overflow:visible}
+.trasa svg.pad{width:22px;margin-left:-1px}
+.trasa.krotka{width:min(260px,60%)}
+
+/* naglowek */
+.nag{position:fixed;inset:0 0 auto;z-index:50;height:72px;display:flex;align-items:center;transition:background .25s,box-shadow .25s}
+.nag .k{display:flex;align-items:center;gap:28px;width:100%}
+.logo{display:block;width:clamp(132px,12vw,176px);flex:none}
+.logo img{width:100%;height:auto}
+.logo .g{display:none}
+.menu{display:flex;gap:clamp(18px,2vw,34px);margin-left:auto;font:500 16px/1 Saira,Arial,sans-serif}
+.menu a{text-decoration:none;color:#fff;padding:8px 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:currentColor}
+.nag .tel{display:flex;align-items:center;gap:8px;color:#fff;text-decoration:none;font:600 16px/1 Saira,Arial,sans-serif;white-space:nowrap}
+.nag .tel svg{width:18px;height:18px}
+.nag .btn{min-height:44px;padding:0 24px;font-size:15px}
+.nag.jasny{background:#fff;box-shadow:0 1px 0 var(--linia)}
+.nag.jasny .menu a,.nag.jasny .tel{color:var(--tekst)}
+.nag.jasny .logo .b{display:none}.nag.jasny .logo .g{display:block}
+.hamb{display:none;margin-left:auto;width:46px;height:46px;border:0;background:transparent;color:#fff;cursor:pointer;padding:11px}
+.hamb span{display:block;height:2px;background:currentColor;margin:5px 0;transition:transform .2s,opacity .2s}
+.nag.jasny .hamb{color:var(--tekst)}
+@media (max-width:1100px){.menu{display:none}.hamb{display:block}.nag .tel span{display:none}.nag .btn{display:none}.nag .k{gap:6px}.nag .tel{margin-left:auto;width:46px;height:46px;justify-content:center}.hamb{margin-left:0}}
+.panel{position:fixed;inset:72px 0 auto;z-index:49;background:#fff;border-bottom:1px solid var(--linia);padding:8px var(--m) 24px;display:none}
+.panel.otw{display:block}
+.panel a{display:block;padding:15px 0;border-bottom:1px solid var(--linia);font:600 20px/1.2 Saira,Arial,sans-serif;text-decoration:none;color:var(--tekst)}
+.panel a.btn{margin-top:20px;width:100%;border:0;display:flex;color:#fff;justify-content:center;font-size:17px}
+.otwarte .hamb span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.otwarte .hamb span:nth-child(2){opacity:0}
+.otwarte .hamb span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.otwarte.nag{background:#fff}.otwarte .hamb,.otwarte .tel{color:var(--tekst)!important}.otwarte .logo .b{display:none}.otwarte .logo .g{display:block}
+
+/* pierwszy ekran */
+.hero{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;color:#fff;background:#0B0F2A;overflow:hidden}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:50% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,8,40,.8) 0%,rgba(4,8,40,.5) 42%,rgba(4,8,40,0) 75%),linear-gradient(0deg,rgba(4,8,40,.55),rgba(4,8,40,0) 45%)}
+.hero .k{position:relative;z-index:1;width:100%;padding-top:110px;padding-bottom:clamp(48px,9vh,110px)}
+.hero h1{color:#fff;font-size:clamp(30px,4.3vw,66px);max-width:15.5em;font-weight:700}
+.hero h1 span{display:block;font-weight:400;font-size:.52em;line-height:1.25;margin-top:.55em;max-width:24em;color:#DCE3F5}
+.hero .lead{color:#E3E8F4;margin-top:22px;max-width:44ch}
+.hero-cta{display:flex;align-items:center;gap:0;margin-top:30px}
+.hero-cta .trasa{color:rgba(255,255,255,.7);width:clamp(120px,16vw,260px);margin-left:-2px}
+@media (max-width:760px){
+ .hero::after{background:linear-gradient(0deg,rgba(4,8,40,.92) 0%,rgba(4,8,40,.78) 40%,rgba(4,8,40,.15) 75%,rgba(4,8,40,.35) 100%)}
+ .hero picture img{object-position:50% 30%}
+ .hero .k{padding-top:96px;padding-bottom:28px}
+ .hero h1{font-size:clamp(27px,7.6vw,34px)}
+ .hero h1 span{font-size:max(16px,.58em)}
+ .hero .lead{font-size:16px;margin-top:14px;line-height:1.5}
+ .hero-cta{margin-top:24px}
+ .hero-cta .btn{flex:1 1 auto}
+ .hero-cta .trasa{display:none}
+}
+@media (max-width:760px) and (max-height:700px){.hero .lead{font-size:15px}.hero h1{font-size:clamp(25px,7vw,30px)}.hero h1 span{margin-top:.4em}}
+
+/* oferta */
+.naglowek-sekcji{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px 64px;align-items:end;margin-bottom:clamp(36px,4vw,56px)}
+.naglowek-sekcji .trasa{grid-column:1/-1;margin-top:-8px}
+@media (max-width:860px){.naglowek-sekcji{grid-template-columns:minmax(0,1fr)}}
+.oferta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(18px,2vw,32px)}
+@media (max-width:980px){.oferta{grid-template-columns:minmax(0,1fr)}}
+.karta{display:flex;flex-direction:column;background:#fff;border:1px solid var(--linia)}
+.karta .tresc{padding:24px 24px 28px;display:flex;flex-direction:column;gap:12px;flex:1}
+.karta p{color:var(--opis);font-size:16px}
+.karta ul{margin:4px 0 0;padding:0;list-style:none;font-size:15px;color:var(--tekst)}
+.karta li{padding:9px 0 9px 22px;border-top:1px solid var(--linia);position:relative}
+.karta li::before{content:"";position:absolute;left:2px;top:15px;width:8px;height:8px;border:2px solid var(--nieb);border-radius:50%}
+.karta .znak{font:600 14px/1 Saira,Arial,sans-serif;color:var(--nieb);letter-spacing:.02em}
+
+/* karuzela zdjec */
+.kar{position:relative;background:var(--jasna)}
+.kar .tor{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab;aspect-ratio:4/3}
+.kar .tor::-webkit-scrollbar{display:none}
+.kar .tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.kar .tor img{flex:0 0 100%;width:100%;height:100%;object-fit:cover;scroll-snap-align:start;user-select:none;-webkit-user-drag:none}
+.kar .licz{position:absolute;right:0;bottom:0;background:var(--granat);color:#fff;font:600 13px/1 Saira,Arial,sans-serif;padding:8px 14px 8px 20px;clip-path:polygon(8px 0,100% 0,100% 100%,0 100%)}
+.kar button{position:absolute;top:50%;width:44px;height:44px;margin-top:-22px;border:0;background:rgba(255,255,255,.92);color:var(--granat);cursor:pointer;opacity:0;transition:opacity .2s;display:flex;align-items:center;justify-content:center}
+.kar button svg{width:18px;height:18px}
+.kar .wst{left:10px}.kar .dal{right:10px}
+.kar:hover button,.kar button:focus-visible{opacity:1}
+@media (hover:none){.kar button{display:none}}
+
+/* droga plytki */
+.jasna{background:var(--jasna)}
+.droga{position:relative}
+.droga .tor{--lp:max(var(--m),calc((100% - var(--k))/2 + var(--m)));display:flex;gap:clamp(16px,1.6vw,24px);overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 var(--m) 6px var(--lp);scroll-padding:0 var(--lp);cursor:grab}
+.droga .tor::-webkit-scrollbar{display:none}
+.droga .tor.ciag{cursor:grabbing;scroll-snap-type:none}
+.etap{flex:0 0 clamp(270px,26vw,380px);scroll-snap-align:start;position:relative;padding-top:34px}
+.etap::before{content:"";position:absolute;top:10px;left:0;right:calc(-1 * clamp(16px,1.6vw,24px));border-top:2px solid var(--szary)}
+.etap:last-child::before{right:50%}
+.etap::after{content:"";position:absolute;top:3px;left:18px;width:12px;height:12px;border:2px solid var(--granat);border-radius:50%;background:var(--jasna)}
+.etap img{width:100%;aspect-ratio:4/3;object-fit:cover;user-select:none;-webkit-user-drag:none}
+.etap h3{font-size:20px;margin-top:16px}
+.etap p{font-size:15px;color:var(--opis);margin-top:6px}
+.droga-nav{display:flex;gap:10px;justify-content:flex-end;margin-top:22px}
+.droga-nav button{width:52px;height:48px;border:0;background:var(--granat);color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%)}
+.droga-nav button:hover{background:var(--nieb)}
+.droga-nav svg{width:18px;height:18px}
+
+/* parametry - mocna sekcja w granacie z logo */
+.param{background:var(--granat);color:#fff}
+.param h2,.param h3{color:#fff}
+.param .lead{color:#C9D3F2}
+.param .trasa{color:rgba(255,255,255,.45)}
+.tab-wrap{overflow-x:auto;margin-top:8px}
+table{width:100%;border-collapse:collapse;font-size:16px;min-width:0}
+th,td{text-align:left;padding:14px 16px 14px 0;border-top:1px solid rgba(255,255,255,.18);vertical-align:top}
+thead th{font:600 15px/1.3 Saira,Arial,sans-serif;color:#C9D3F2;border-top:0;padding-bottom:12px}
+tbody th{font-weight:500;color:#C9D3F2;width:28%}
+td{color:#fff}
+td[colspan]{color:#fff}
+.kolory{display:flex;flex-wrap:wrap;gap:8px 14px}
+.kolory span{display:inline-flex;align-items:center;gap:7px;white-space:nowrap}
+.kolory b{width:16px;height:16px;transform:skewX(-15deg);border:1px solid rgba(255,255,255,.5)}
+.param-dol{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px 40px;margin-top:clamp(40px,5vw,64px);padding-top:32px;border-top:2px solid rgba(255,255,255,.3)}
+.param-dol h3{font-size:20px;margin-bottom:8px}
+.param-dol p{color:#C9D3F2;font-size:16px}
+@media (max-width:860px){
+ .param-dol{grid-template-columns:minmax(0,1fr)}
+ table,thead,tbody,tr,th,td{display:block}
+ thead{display:none}
+ tbody tr{border-top:1px solid rgba(255,255,255,.22);padding:14px 0}
+ tbody th,td{border:0;padding:2px 0;width:auto}
+ tbody th{font-size:14px;margin-bottom:4px}
+ td[data-t]::before{content:attr(data-t) ": ";color:#9FB0E6;font-size:14px}
+}
+
+/* zastosowania */
+.zast{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:clamp(32px,5vw,80px);align-items:center}
+.zast figure{margin:0}
+.zast figure img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.branze{columns:2;column-gap:32px;margin:28px 0 0;padding:0;list-style:none}
+.branze li{break-inside:avoid;padding:11px 0;border-top:1px solid var(--linia);font-weight:500}
+@media (max-width:860px){.zast{grid-template-columns:minmax(0,1fr)}.zast figure img{aspect-ratio:4/3}.branze{columns:1}}
+@media (max-width:860px){.zast figure{order:2}}
+
+/* zaklad */
+.zaklad{position:relative;height:clamp(240px,34vw,520px);overflow:hidden;background:#cfd6e2}
+.zaklad img{width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.firma{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px clamp(32px,5vw,80px)}
+.firma p+p{margin-top:16px}
+.firma .lead{color:var(--tekst)}
+.firma .opis p{color:var(--opis)}
+@media (max-width:860px){.firma{grid-template-columns:minmax(0,1fr)}}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(32px,5vw,80px)}
+@media (max-width:980px){.kontakt{grid-template-columns:minmax(0,1fr)}}
+.dane{display:flex;flex-direction:column;gap:22px;margin-top:28px}
+.dane div{border-top:1px solid var(--linia);padding-top:14px}
+.dane b{display:block;font:600 14px/1.3 Saira,Arial,sans-serif;color:var(--nieb);margin-bottom:4px}
+.dane a{text-decoration:none}
+.dane a:hover{color:var(--nieb)}
+.mapa{margin-top:28px;aspect-ratio:16/10;background:var(--jasna);position:relative;border:1px solid var(--linia)}
+.mapa iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+form{background:var(--jasna);padding:clamp(22px,3vw,40px)}
+form h3{margin-bottom:6px}
+form>p{color:var(--opis);font-size:16px;margin-bottom:22px}
+.pola{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:16px}
+.pola .cale{grid-column:1/-1}
+@media (max-width:560px){.pola{grid-template-columns:minmax(0,1fr)}}
+label{display:flex;flex-direction:column;gap:6px;font-size:14px;font-weight:600}
+input,select,textarea{font:400 16px/1.4 Inter,Arial,sans-serif;color:var(--tekst);background:#fff;border:1px solid #C3CAD6;border-radius:0;padding:13px 14px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--nieb);outline-offset:-1px;border-color:var(--nieb)}
+input[type=file]{padding:10px;background:#fff}
+textarea{min-height:120px;resize:vertical}
+.zgoda{flex-direction:row;align-items:flex-start;gap:10px;font-weight:400;color:var(--opis)}
+.zgoda input{width:18px;height:18px;flex:none;margin-top:2px}
+form .btn{margin-top:20px}
+.info{display:none;margin-top:14px;font-size:15px;color:var(--granat);font-weight:600}
+.info.widac{display:block}
+
+/* stopka */
+.stopka{background:#080C33;color:#AEB6D6;font-size:15px;padding:56px 0 30px}
+.stopka .gora{display:grid;grid-template-columns:minmax(0,1.4fr) repeat(2,minmax(0,1fr));gap:28px 40px}
+.stopka img{width:150px;margin-bottom:16px}
+.stopka b{display:block;color:#fff;font:600 15px/1.3 Saira,Arial,sans-serif;margin-bottom:10px}
+.stopka a{text-decoration:none}.stopka a:hover{color:#fff}
+.stopka .gora div>a,.stopka .gora div>span{display:block;padding:3px 0}
+.stopka .wylinka-badge{white-space:nowrap}
+.stopka .dol{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px 24px;margin-top:40px;padding-top:22px;border-top:1px solid rgba(255,255,255,.14)}
+@media (max-width:760px){.stopka .gora{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.stopka .gora>div:first-child{grid-column:1/-1}}
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+/* pasek na telefonie po przewinieciu */
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;grid-template-columns:1fr 1.4fr;background:#fff;box-shadow:0 -1px 0 var(--linia);transform:translateY(100%);transition:transform .25s}
+.mob a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:56px;font:600 16px/1 Saira,Arial,sans-serif;text-decoration:none;color:var(--granat)}
+.mob a+a{background:var(--granat);color:#fff}
+.mob svg{width:18px;height:18px}
+@media (max-width:760px){.mob{display:grid}.mob.widac{transform:none}.stopka{padding-bottom:86px}}
+:focus-visible{outline:2px solid var(--nieb);outline-offset:2px}
+</style>
+</head>
+<body>
+
+<header class="nag" id="nag">
+ <div class="k">
+  <a class="logo" href="#" aria-label="ELSEKO - strona główna"><img class="b" src="img/logo-biale.png" width="640" height="89" alt="ELSEKO"><img class="g" src="img/logo-granat.png" width="640" height="89" alt="ELSEKO"></a>
+  <nav class="menu" aria-label="Menu główne">
+   <a href="#oferta">Oferta</a><a href="#produkcja">Produkcja</a><a href="#parametry">Parametry</a><a href="#firma">O firmie</a><a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel" href="tel:+48713465293" aria-label="Zadzwoń: 71 346 52 93"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5.5 2.5h3l1.2 4-2 1.3a10 10 0 0 0 4.5 4.5l1.3-2 4 1.2v3c0 1-.8 2-2 2C9 16.5 3.5 11 3.5 4.5c0-1.2 1-2 2-2z"/></svg><span>71 346 52 93</span></a>
+  <a class="btn" href="#kontakt">Wycena</a>
+  <button class="hamb" id="hamb" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span><span></span><span></span></button>
+ </div>
+</header>
+<nav class="panel" id="panel" aria-label="Menu">
+ <a href="#oferta">Oferta</a><a href="#produkcja">Produkcja</a><a href="#parametry">Parametry</a><a href="#firma">O firmie</a><a href="#kontakt">Kontakt</a>
+ <a class="btn" href="#kontakt">Wyślij projekt do wyceny</a>
+</nav>
+
+<main>
+<section class="hero">
+ <picture>
+  <source media="(max-width:760px)" srcset="img/hero-tel-900.webp 900w, img/hero-tel-1536.webp 1536w" sizes="max(100vw, 60vh)">
+  <img src="img/hero-1920.webp" srcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2560.webp 2560w" sizes="max(100vw, 150vh)" width="2560" height="1707" alt="Linia wiertarek CNC nad płytami obwodów drukowanych w zakładzie ELSEKO" fetchpriority="high">
+ </picture>
+ <div class="k">
+  <h1>Obwody drukowane PCB i montaż SMD/THT pod Wrocławiem <span>Od ścieżki na laminacie do gotowego pakietu, w jednym zakładzie w Kobierzycach.</span></h1>
+  <p class="lead">Płytki jedno-, dwustronne i wielowarstwowe do 16 warstw, montaż powierzchniowy i przewlekany. Prototyp w 24 godziny, serie średnie i długie. Od 1984 roku.</p>
+  <div class="hero-cta">
+   <a class="btn btn-jasny" href="#kontakt">Wyślij projekt do wyceny</a>
+   <div class="trasa" aria-hidden="true"><i></i><svg viewBox="0 0 28 26"><path d="M0 1h4l20 24h4" fill="none" stroke="currentColor" stroke-width="2"/></svg><i class="dol"></i><svg class="pad" viewBox="0 0 22 26"><circle cx="11" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+  </div>
+ </div>
+</section>
+
+<section class="sekcja" id="oferta">
+ <div class="k">
+  <div class="naglowek-sekcji">
+   <h2>Płytka, montaż i test u jednego producenta</h2>
+   <p class="lead">Nie trzeba szukać osobno producenta PCB i firmy montażowej. Robimy obwody, wykonujemy szablony laserowe, montujemy elementy i sprawdzamy gotowe pakiety. W technologii ołowiowej i bezołowiowej.</p>
+   <div class="trasa" aria-hidden="true"><i></i><svg viewBox="0 0 28 26"><path d="M0 1h4l20 24h4" fill="none" stroke="currentColor" stroke-width="2"/></svg><i class="dol"></i><svg class="pad" viewBox="0 0 22 26"><circle cx="11" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+  </div>
+  <div class="oferta">
+   <article class="karta">
+    <div class="kar" data-kar>
+     <div class="tor">
+      <img src="img/pcb-mozaika-1000.webp" srcset="img/pcb-mozaika-640.webp 640w, img/pcb-mozaika-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="953" alt="Dwustronna płytka PCB z zieloną maską i białym opisem" loading="lazy">
+      <img src="img/pcb-klisza-1000.webp" srcset="img/pcb-klisza-640.webp 640w, img/pcb-klisza-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="669" alt="Kontrola kliszy z mozaiką obwodów na stole podświetlanym" loading="lazy">
+      <img src="img/pcb-aoi-1000.webp" srcset="img/pcb-aoi-640.webp 640w, img/pcb-aoi-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="761" alt="Panel płytek na stanowisku kontroli optycznej" loading="lazy">
+      <img src="img/pcb-kontrola-1000.webp" srcset="img/pcb-kontrola-640.webp 640w, img/pcb-kontrola-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="667" alt="Płyty laminatu w maszynie produkcyjnej" loading="lazy">
+     </div>
+     <button class="wst" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+     <button class="dal" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4 6 6-6 6"/></svg></button>
+     <span class="licz">1 / 4</span>
+    </div>
+    <div class="tresc">
+     <span class="znak">PCB</span>
+     <h3>Obwody drukowane</h3>
+     <p>Od tego zaczynaliśmy w 1984 roku. Płytki z laminatu FR-4 i na podłożu aluminiowym, od prototypu po serie, ok. 2000 m² obwodów miesięcznie.</p>
+     <ul><li>jednostronne, także ALU</li><li>dwustronne z metalizacją otworów</li><li>wielowarstwowe 4, 6, 8, do 16 warstw</li></ul>
+    </div>
+   </article>
+   <article class="karta">
+    <div class="kar" data-kar>
+     <div class="tor">
+      <img src="img/smd-automat-1000.webp" srcset="img/smd-automat-640.webp 640w, img/smd-automat-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="750" alt="Automat montażowy Siplace z taśmami komponentów SMD" loading="lazy">
+      <img src="img/smd-led-1000.webp" srcset="img/smd-led-640.webp 640w, img/smd-led-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="1273" alt="Płyty LED na przenośniku pod głowicą automatu" loading="lazy">
+      <img src="img/smd-podajniki-1000.webp" srcset="img/smd-podajniki-640.webp 640w, img/smd-podajniki-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="669" alt="Rząd podajników taśmowych w automacie SMD" loading="lazy">
+      <img src="img/smd-pakiet-1000.webp" srcset="img/smd-pakiet-640.webp 640w, img/smd-pakiet-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="669" alt="Głowica nakładająca elementy na zieloną płytkę" loading="lazy">
+      <img src="img/smd-glowica-1000.webp" srcset="img/smd-glowica-640.webp 640w, img/smd-glowica-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="669" alt="Wnętrze automatu montażowego z głowicą" loading="lazy">
+     </div>
+     <button class="wst" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+     <button class="dal" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4 6 6-6 6"/></svg></button>
+     <span class="licz">1 / 5</span>
+    </div>
+    <div class="tresc">
+     <span class="znak">SMD</span>
+     <h3>Montaż powierzchniowy</h3>
+     <p>Montaż kontraktowy na liniach Siemens, z własnymi szablonami laserowymi do nakładania pasty.</p>
+     <ul><li>automaty Siplace S27 i Siplace F5</li><li>sitodrukarka SEM-668</li><li>dwie dodatkowe linie Siemens</li><li>pięciostrefowy piec rozpływowy</li></ul>
+    </div>
+   </article>
+   <article class="karta">
+    <div class="kar" data-kar>
+     <div class="tor">
+      <img src="img/tht-lutowanie-1000.webp" srcset="img/tht-lutowanie-640.webp 640w, img/tht-lutowanie-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="1155" alt="Lutowanie punktowe elementów przewlekanych na płytce" loading="lazy">
+      <img src="img/tht-pakiet-1000.webp" srcset="img/tht-pakiet-640.webp 640w, img/tht-pakiet-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="750" alt="Zmontowany pakiet z kondensatorami i dławikami" loading="lazy">
+      <img src="img/tht-pakiet2-1000.webp" srcset="img/tht-pakiet2-640.webp 640w, img/tht-pakiet2-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="666" alt="Gotowe pakiety elektroniki po montażu" loading="lazy">
+      <img src="img/smd-plyty-1000.webp" srcset="img/smd-plyty-640.webp 640w, img/smd-plyty-1000.webp 1000w" sizes="(max-width:980px) 92vw, 30vw" width="1000" height="669" alt="Zmontowane płytki ułożone w stosie" loading="lazy">
+     </div>
+     <button class="wst" aria-label="Poprzednie zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+     <button class="dal" aria-label="Następne zdjęcie"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4 6 6-6 6"/></svg></button>
+     <span class="licz">1 / 4</span>
+    </div>
+    <div class="tresc">
+     <span class="znak">THT</span>
+     <h3>Montaż przewlekany</h3>
+     <p>Elementy przewlekane montowane ręcznie i półautomatycznie, lutowane na fali albo punktowo.</p>
+     <ul><li>lutowanie na fali</li><li>stacje do lutowania punktowego</li><li>maszyny do formowania elementów</li></ul>
+    </div>
+   </article>
+  </div>
+ </div>
+</section>
+
+<section class="sekcja jasna" id="produkcja">
+ <div class="k">
+  <div class="naglowek-sekcji">
+   <h2>Droga płytki przez nasz zakład</h2>
+   <p class="lead">Każdy etap robimy na miejscu, więc wiemy, co dzieje się z Państwa projektem od pierwszej kliszy do lutowania. Przesuń, żeby zobaczyć kolejne etapy.</p>
+  </div>
+ </div>
+ <div class="droga">
+  <div class="tor" id="droga">
+   <figure class="etap"><img src="img/etap-naswietlanie-640.webp" srcset="img/etap-naswietlanie-640.webp 640w, img/etap-naswietlanie-1000.webp 1000w" sizes="(max-width:760px) 82vw, 380px" width="640" height="428" alt="Praca na kliszy z mozaiką obwodów w żółtym świetle" loading="lazy"><h3>Klisze i naświetlanie</h3><p>Mozaika ścieżek przenoszona na laminat w pomieszczeniu z żółtym światłem.</p></figure>
+   <figure class="etap"><img src="img/etap-wiercenie-640.webp" srcset="img/etap-wiercenie-640.webp 640w, img/etap-wiercenie-1000.webp 1000w" sizes="(max-width:760px) 82vw, 380px" width="640" height="492" alt="Wrzeciono maszyny nad płytą laminatu" loading="lazy"><h3>Wiercenie i frezowanie</h3><p>Otwory od 0,30 mm, frezowanie, rylcowanie i frezowanie na głębokość.</p></figure>
+   <figure class="etap"><img src="img/etap-uv-640.webp" srcset="img/etap-uv-640.webp 640w, img/etap-uv-1000.webp 1000w" sizes="(max-width:760px) 82vw, 380px" width="640" height="443" alt="Utwardzanie światłem UV w maszynie do nadruku" loading="lazy"><h3>Maska i opis</h3><p>Maska antylutownicza w sześciu kolorach i bezpośredni nadruk opisów elementów.</p></figure>
+   <figure class="etap"><img src="img/etap-test-640.webp" srcset="img/etap-test-640.webp 640w, img/etap-test-1000.webp 1000w" sizes="(max-width:760px) 82vw, 380px" width="640" height="428" alt="Płyta pod głowicą testera w czerwonym świetle" loading="lazy"><h3>Test optyczny i elektryczny</h3><p>Kontrola AOI i test elektryczny testerami palcowymi, zanim płytka trafi dalej.</p></figure>
+   <figure class="etap"><img src="img/smd-automat-640.webp" srcset="img/smd-automat-640.webp 640w, img/smd-automat-1000.webp 1000w" sizes="(max-width:760px) 82vw, 380px" width="640" height="480" alt="Automat Siplace podczas montażu SMD" loading="lazy"><h3>Montaż SMD</h3><p>Pasta przez szablon laserowy, automaty Siplace i lutowanie w piecu rozpływowym.</p></figure>
+   <figure class="etap"><img src="img/tht-lutowanie-640.webp" srcset="img/tht-lutowanie-640.webp 640w, img/tht-lutowanie-1000.webp 1000w" sizes="(max-width:760px) 82vw, 380px" width="640" height="739" alt="Lutowanie elementu przewlekanego" loading="lazy"><h3>Montaż THT i gotowy pakiet</h3><p>Elementy przewlekane, lutowanie na fali lub punktowe i gotowe pakiety do wysyłki.</p></figure>
+  </div>
+  <div class="k droga-nav">
+   <button id="dw" aria-label="Poprzedni etap"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="M12.5 4 6.5 10l6 6"/></svg></button>
+   <button id="dd" aria-label="Następny etap"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><path d="m7.5 4 6 6-6 6"/></svg></button>
+  </div>
+ </div>
+</section>
+
+<section class="sekcja param" id="parametry">
+ <div class="k">
+  <div class="naglowek-sekcji">
+   <h2>Parametry technologiczne</h2>
+   <p class="lead">Najważniejsze dane dla konstruktora w jednym miejscu. Jeśli projekt wychodzi poza tabelę, prosimy o pliki, sprawdzimy go z technologiem.</p>
+   <div class="trasa" aria-hidden="true"><i></i><svg viewBox="0 0 28 26"><path d="M0 1h4l20 24h4" fill="none" stroke="currentColor" stroke-width="2"/></svg><i class="dol"></i><svg class="pad" viewBox="0 0 22 26"><circle cx="11" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+  </div>
+  <div class="tab-wrap">
+   <table>
+    <thead><tr><th>Parametr</th><th>Jednostronne</th><th>Dwustronne</th><th>Wielowarstwowe</th></tr></thead>
+    <tbody>
+     <tr><th>Liczba warstw</th><td data-t="Jednostronne">1</td><td data-t="Dwustronne">2</td><td data-t="Wielowarstwowe">4, 6, 8, do 16</td></tr>
+     <tr><th>Podłoże</th><td data-t="Jednostronne">FR-4, aluminium (ALU)</td><td data-t="Dwustronne">FR-4</td><td data-t="Wielowarstwowe">FR-4</td></tr>
+     <tr><th>Min. średnica otworu</th><td data-t="Jednostronne">0,40 mm</td><td data-t="Dwustronne">0,35 mm</td><td data-t="Wielowarstwowe">0,30 mm</td></tr>
+     <tr><th>Min. pierścień wokół otworu</th><td data-t="Jednostronne">6 milsów</td><td data-t="Dwustronne">5 milsów</td><td data-t="Wielowarstwowe">min. odstęp padów 4 milsy</td></tr>
+     <tr><th>Grubość laminatu</th><td colspan="3">0,36 / 0,50 / 0,80 / 1,00 / 1,20 / 1,55 / 2,00 / 2,40 / 3,20 mm</td></tr>
+     <tr><th>Grubość miedzi</th><td colspan="3">18 / 35 / 70 / 105 µm</td></tr>
+     <tr><th>Min. szerokość ścieżki</th><td colspan="3">4 milsy (miedź 18 µm), 6 milsów (35 µm), 8 milsów (70 µm)</td></tr>
+     <tr><th>Pokrycie padów</th><td colspan="3">HAL ołowiowy, HAL bezołowiowy, złoto chemiczne</td></tr>
+     <tr><th>Kolor maski</th><td colspan="3"><span class="kolory"><span><b style="background:#0E7A3E"></b>zielony</span><span><b style="background:#fff"></b>biały</span><span><b style="background:#111"></b>czarny</span><span><b style="background:#1D5FD1"></b>niebieski</span><span><b style="background:#C8232C"></b>czerwony</span><span><b style="background:#F2C919"></b>żółty</span></span></td></tr>
+     <tr><th>Kolor opisu</th><td colspan="3">biały, czarny, czerwony, niebieski</td></tr>
+     <tr><th>Obróbka mechaniczna</th><td colspan="3">frezowanie, rylcowanie, frezowanie na głębokość</td></tr>
+     <tr><th>Testy</th><td colspan="3">AOI, test elektryczny testerami palcowymi</td></tr>
+     <tr><th>Usługi dodatkowe</th><td colspan="3">maska zdzieralna, datowanie, nadruk logo producenta, numeracja płytek</td></tr>
+    </tbody>
+   </table>
+  </div>
+  <div class="param-dol">
+   <div><h3>Prototyp w 24 h</h3><p>Prototypy obwodów wykonujemy w 24 godziny. Produkujemy też serie średnie i długie.</p></div>
+   <div><h3>2000 m² miesięcznie</h3><p>Tyle obwodów drukowanych możemy wyprodukować w miesiąc, na stale unowocześnianym parku maszyn.</p></div>
+   <div><h3>Szablony laserowe</h3><p>Szablony do nakładania pasty lutowniczej wykonujemy na miejscu, przy montażu SMD.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="sekcja">
+ <div class="k zast">
+  <figure><img src="img/pcb-montaz-640.webp" srcset="img/pcb-montaz-640.webp 640w, img/pcb-montaz-1000.webp 1000w" sizes="(max-width:860px) 92vw, 42vw" width="640" height="847" alt="Płytka drukowana z opisem elementów w uchwycie montażowym" loading="lazy"></figure>
+  <div>
+   <h2>Gdzie pracują nasze płytki</h2>
+   <p class="lead" style="margin-top:20px">Obwody z Kobierzyc trafiły do ponad 7600 klientów z 42 krajów, w Polsce, Europie, Azji i USA. Licząc razem, to ponad 565 milionów urządzeń.</p>
+   <ul class="branze">
+    <li>Przemysł motoryzacyjny</li><li>Automatyka przemysłowa</li><li>Artykuły gospodarstwa domowego</li><li>Anteny</li><li>Telekomunikacja i komputery</li><li>Napędy i sterowanie</li><li>Sprzęt medyczny</li><li>Urządzenia RTV</li><li>Oświetlenie</li><li>Zasilanie i układy kontrolno-pomiarowe</li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section class="jasna" id="firma">
+ <div class="zaklad"><img src="img/zaklad-1280.webp" srcset="img/zaklad-1280.webp 1280w, img/zaklad-1920.webp 1920w, img/zaklad-2560.webp 2560w" sizes="(max-width:760px) 690px, 100vw" width="1280" height="468" alt="Budynek zakładu ELSEKO przy ul. Inwestycyjnej w Kobierzycach" loading="lazy"></div>
+ <div class="sekcja"><div class="k firma">
+  <div>
+   <h2>Z Kobierzyc, od 1984 roku</h2>
+   <div class="trasa krotka" aria-hidden="true" style="margin-top:22px"><i></i><svg viewBox="0 0 28 26"><path d="M0 1h4l20 24h4" fill="none" stroke="currentColor" stroke-width="2"/></svg><i class="dol"></i><svg class="pad" viewBox="0 0 22 26"><circle cx="11" cy="25" r="6" fill="none" stroke="currentColor" stroke-width="2"/></svg></div>
+  </div>
+  <div class="opis">
+   <p class="lead">ELSEKO Stachowiak i wspólnicy zaczynało od produkcji obwodów drukowanych i przetrwało wszystkie zmiany gospodarcze ostatnich dekad. Dziś obok płytek robimy pełny montaż elektroniki.</p>
+   <p>Pomagamy też na etapie projektu: doradzamy, jak przygotować płytkę, żeby dało się ją dobrze wyprodukować. Odwiedzają nas studenci Politechniki Wrocławskiej, a studentom dostarczamy obwody do prac dyplomowych.</p>
+   <p>Dla pasjonatów elektroniki produkujemy płytki uniwersalne do montażu prostych układów. Są w sklepach z częściami elektronicznymi i w naszym sklepie internetowym.</p>
+  </div>
+ </div></div>
+</section>
+
+<section class="sekcja" id="kontakt">
+ <div class="k kontakt">
+  <div>
+   <h2>Prześlij projekt, przygotujemy wycenę</h2>
+   <div class="dane">
+    <div><b>Telefon</b><a href="tel:+48713465293">+48 71 346 52 93</a>, <a href="tel:+48713465296">96</a>, <a href="tel:+48713465299">99</a></div>
+    <div><b>E-mail</b>elseko@elseko.pl</div>
+    <div><b>Adres</b>ul. Inwestycyjna 3, 55-040 Kobierzyce</div>
+   </div>
+   <div class="mapa" id="mapa" data-src="https://maps.google.com/maps?q=ELSEKO%20Inwestycyjna%203%20Kobierzyce&amp;t=m&amp;z=13&amp;output=embed"></div>
+  </div>
+  <form id="form" novalidate>
+   <h3>Zapytanie ofertowe</h3>
+   <p>Wystarczą pliki i liczba sztuk. Odpowiadamy z wyceną i terminem.</p>
+   <div class="pola">
+    <label>Imię i nazwisko<input name="imie" autocomplete="name"></label>
+    <label>Firma<input name="firma" autocomplete="organization"></label>
+    <label>E-mail<input type="email" name="email" autocomplete="email"></label>
+    <label>Telefon<input type="tel" name="tel" autocomplete="tel"></label>
+    <label>Czego dotyczy<select name="co"><option>Obwody drukowane PCB</option><option>PCB z montażem SMD/THT</option><option>Sam montaż (płytki klienta)</option><option>Prototyp 24 h</option><option>Szablony laserowe</option></select></label>
+    <label>Liczba sztuk<input name="ilosc" inputmode="numeric"></label>
+    <label class="cale">Pliki (Gerber, BOM, rysunek)<input type="file" name="pliki" multiple></label>
+    <label class="cale">Wiadomość<textarea name="wiad" placeholder="Parametry, termin, uwagi"></textarea></label>
+    <label class="zgoda cale"><input type="checkbox" name="zgoda">Zgadzam się na przetwarzanie danych w celu przygotowania oferty.</label>
+   </div>
+   <button class="btn" type="submit">Wyślij zapytanie</button>
+   <p class="info" id="info">To podgląd strony, formularz jeszcze nie wysyła wiadomości.</p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="k">
+  <div class="gora">
+   <div><img src="img/logo-biale.png" width="640" height="89" alt="ELSEKO" loading="lazy"><p>ELSEKO Stachowiak i wspólnicy sp.j.<br>Producent obwodów drukowanych PCB i usług montażu EMS</p></div>
+   <div><b>Oferta</b><a href="#oferta">Obwody drukowane</a><a href="#oferta">Montaż SMD</a><a href="#oferta">Montaż THT</a><a href="#parametry">Parametry</a></div>
+   <div><b>Kontakt</b><a href="tel:+48713465293">+48 71 346 52 93</a><span>elseko@elseko.pl</span><span>ul. Inwestycyjna 3<br>55-040 Kobierzyce</span></div>
+  </div>
+  <div class="dol"><span>© 1984-<span id="rok">2026</span> ELSEKO</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=elseko.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<div class="mob" id="mob"><a href="tel:+48713465293"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M5.5 2.5h3l1.2 4-2 1.3a10 10 0 0 0 4.5 4.5l1.3-2 4 1.2v3c0 1-.8 2-2 2C9 16.5 3.5 11 3.5 4.5c0-1.2 1-2 2-2z"/></svg>Zadzwoń</a><a href="#kontakt">Wyślij projekt</a></div>
+
+<script>
+(function(){
+var nag=document.getElementById('nag'),hamb=document.getElementById('hamb'),panel=document.getElementById('panel'),mob=document.getElementById('mob'),hero=document.querySelector('.hero');
+function st(){nag.classList.toggle('jasny',scrollY>40)}st();addEventListener('scroll',st,{passive:true});
+function zamknij(){panel.classList.remove('otw');nag.classList.remove('otwarte');hamb.setAttribute('aria-expanded','false')}
+hamb.addEventListener('click',function(){var o=!panel.classList.contains('otw');panel.classList.toggle('otw',o);nag.classList.toggle('otwarte',o);hamb.setAttribute('aria-expanded',o)});
+panel.querySelectorAll('a').forEach(function(a){a.addEventListener('click',zamknij)});
+new IntersectionObserver(function(e){mob.classList.toggle('widac',!e[0].isIntersecting)},{rootMargin:'-60% 0px 0px 0px'}).observe(hero);
+function ciag(tor){var x0,s0,d=false,ruch=0;
+ tor.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;d=true;ruch=0;x0=e.clientX;s0=tor.scrollLeft;tor.classList.add('ciag');e.preventDefault()});
+ addEventListener('pointermove',function(e){if(!d)return;ruch=Math.abs(e.clientX-x0);tor.scrollLeft=s0-(e.clientX-x0)});
+ addEventListener('pointerup',function(){if(!d)return;d=false;tor.classList.remove('ciag');var w=tor.firstElementChild.getBoundingClientRect().width+parseFloat(getComputedStyle(tor).columnGap||0);tor.scrollTo({left:Math.round(tor.scrollLeft/w)*w,behavior:'smooth'})});
+ tor.addEventListener('click',function(e){if(ruch>5){e.preventDefault();e.stopPropagation()}},true);}
+document.querySelectorAll('[data-kar]').forEach(function(k){var tor=k.querySelector('.tor'),n=tor.children.length,l=k.querySelector('.licz');
+ function idx(){return Math.round(tor.scrollLeft/tor.clientWidth)}
+ tor.addEventListener('scroll',function(){l.textContent=(idx()+1)+' / '+n},{passive:true});
+ k.querySelector('.wst').addEventListener('click',function(){tor.scrollTo({left:Math.max(0,idx()-1)*tor.clientWidth,behavior:'smooth'})});
+ k.querySelector('.dal').addEventListener('click',function(){var i=idx()+1;if(i>=n)i=0;tor.scrollTo({left:i*tor.clientWidth,behavior:'smooth'})});
+ ciag(tor);});
+var dr=document.getElementById('droga');ciag(dr);
+function krok(z){var w=dr.firstElementChild.getBoundingClientRect().width+20;dr.scrollBy({left:z*w,behavior:'smooth'})}
+document.getElementById('dw').addEventListener('click',function(){krok(-1)});document.getElementById('dd').addEventListener('click',function(){krok(1)});
+var mapa=document.getElementById('mapa');new IntersectionObserver(function(e,o){if(e[0].isIntersecting){var f=document.createElement('iframe');f.src=mapa.dataset.src;f.title='Mapa dojazdu do ELSEKO';f.loading='lazy';f.referrerPolicy='no-referrer-when-downgrade';mapa.appendChild(f);o.disconnect()}},{rootMargin:'300px'}).observe(mapa);
+document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('info').classList.add('widac')});
+document.getElementById('rok').textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
